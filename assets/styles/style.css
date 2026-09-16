@@ -41,6 +41,7 @@ img {
 
 main {
     display: flex;
+    flex-direction: column;
     width: 380px;
     gap: 100px;
     margin-inline: auto;
@@ -56,6 +57,7 @@ section, header{
 header{
     justify-content: space-between;
 }
+
 h1 .heading__mobile-accent{
     font-style: italic;
     color: var(--text-accent);
@@ -104,20 +106,6 @@ h1 .heading__mobile {
     gap: 40px;
 }
 
-.offer__heading{
-    font-family: var(--font-family);
-        font-weight: 600;
-        font-style: italic;
-        font-size: 42px;
-        line-height: 115%;
-        color: var(--text-accent);
-}
-
-button.offer__button{
-    border-radius: 100px;
-    padding: 20px 64px;
-    background: var(--text-inverse);
-}
 
 .header__menu{
     display: flex;
@@ -135,7 +123,6 @@ nav.header__nav{
 }
 
 .desktop__link-catalog{
-    display: flex;
     gap: 8px;
     font-family: var(--font-family);
     font-weight: 600;
@@ -144,6 +131,7 @@ nav.header__nav{
     color: var(--text-primary);
     display: none;
 }
+
 .mobile__link-catalog {
     display: flex;
     gap: 8px;
@@ -152,6 +140,10 @@ nav.header__nav{
     font-size: 15px;
     line-height: 150%;
     color: var(--text-primary);
+    border-radius: 100px;
+    padding: 20px 64px;
+    background: var(--text-inverse);
+    text-decoration: none;
 }
 
 .desktop__link-catalog img{
