@@ -3,13 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffe house</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Coffee house</title>
     <script>
     const saved = localStorage.getItem('theme');
     if (saved) document.documentElement.dataset.theme = saved;
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
+    <header>
+        <div class="header__container">
+            <div class="header__menu">
+                <a href="assets/images/logo.png" class="header__logo"><img src="assets/images/logo.png" alt="logotype" class="logo__image"></a>
+                <nav class="header__nav">
+                    <ul>
+                        <li>Favorite coffee</li>
+                        <li>About</li>
+                        <li>Mobile app</li>
+                        <li>Contact us</li>
+                    </ul>
+                </nav>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+        <section class="hero__section">
+        </section>
+        <section class="slider__section">
+            <div class="container">
+            </div>
+        </section>
+        <section class="about__section"></section>
+        <section class="app__scetionh"></section>
+    <footer></footer>
 </body>
 </html>
