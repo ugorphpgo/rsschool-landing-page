@@ -207,7 +207,7 @@ header .cup__icon path {
 .hero__container {
     display: flex;
     padding: 60px 16px;
-    background-image: url('../images/img-hero.png');
+    background-image: url('../images/img-hero.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
