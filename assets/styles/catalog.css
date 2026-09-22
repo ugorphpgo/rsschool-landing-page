@@ -1,6 +1,5 @@
 header .link__catalog {
     border-bottom: 2px solid transparent;
-    display: flex;
     border-bottom-color:var(--text-primary);
     cursor: text;
 }
