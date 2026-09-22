@@ -532,7 +532,7 @@ section .link__catalog {
   color: var(--text-inverse);
 }
 
-.contacts__item:hover,
+a.contacts__item:hover,
 .header__nav a:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
