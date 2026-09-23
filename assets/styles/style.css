@@ -848,6 +848,10 @@ h1.catalog__title {
     display: flex;
   }
 
+  h2.slider__heading{
+    text-align: center;
+  }
+
   .app__buttons {
     flex-direction: row;
   }
