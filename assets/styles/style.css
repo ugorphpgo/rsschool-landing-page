@@ -798,11 +798,12 @@ h1.catalog__title {
   }
 }
 
+@media (hover: hover) {
 :root:not([data-theme='dark']) .theme__switch:hover .theme__switch__dark,
 [data-theme='dark'] .theme__switch:hover .theme__switch__light {
   background: var(--background-container);
   color: var(--text-inverse);
-}
+}}
 
 /* Adaptive */
 
@@ -871,10 +872,6 @@ h1.catalog__title {
 }
 
 @media (width >=1024px) {
-  .header__nav {
-    display: flex;
-  }
-
   .hero__container {
     padding: 100px;
     flex-direction: column;
@@ -910,10 +907,6 @@ h1.catalog__title {
     flex-direction: row;
   }
 
-  .burger__menu {
-    display: none;
-  }
-
   .theme__switch {
     max-width: 88px;
     max-height: 44px;
@@ -946,6 +939,14 @@ h1.catalog__title {
 }
 
 @media (width >=769px) {
+  .burger__menu {
+    display: none;
+  }
+
+  .header__nav {
+    display: flex;
+  }
+
   .refresh__button {
     display: none;
   }

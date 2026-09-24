@@ -2,6 +2,7 @@ const products = [
   {
     id: 'coffe-1',
     name: 'Irish coffee',
+    image: 'assets/images/coffee-1-preview.webp',
     description: 'Fragrant black coffee with Jameson Irish whiskey and whipped milk',
     price: '7.00',
     category: 'coffee',
@@ -38,6 +39,7 @@ const products = [
   {
     id: 'coffe-2',
     name: 'Kahlua coffee',
+    image: 'assets/images/coffee-2-preview.webp',
     description: 'Classic coffee with milk and Kahlua liqueur under a cap of frothed milk',
     price: '7.00',
     category: 'coffee',
@@ -74,6 +76,7 @@ const products = [
   {
     id: 'coffe-3',
     name: 'Honey raf',
+    image: 'assets/images/coffee-3-preview.webp',
     description: 'Espresso with frothed milk, cream and aromatic honey',
     price: '5.50',
     category: 'coffee',
@@ -110,6 +113,7 @@ const products = [
   {
     id: 'coffe-4',
     name: 'Ice cappuccino',
+    image: 'assets/images/coffee-4-preview.webp',
     description: 'Cappuccino with soft thick foam in summer version with ice',
     price: '5.00',
     category: 'coffee',
@@ -146,6 +150,7 @@ const products = [
   {
     id: 'coffe-5',
     name: 'Espresso',
+    image: 'assets/images/coffee-5-preview.webp',
     description: 'Classic black coffee',
     price: '4.50',
     category: 'coffee',
@@ -182,6 +187,7 @@ const products = [
   {
     id: 'coffe-6',
     name: 'Latte',
+    image: 'assets/images/coffee-6-preview.webp',
     description: 'Espresso coffee with the addition of steamed milk and dense milk foam',
     price: '5.50',
     category: 'coffee',
@@ -218,6 +224,7 @@ const products = [
   {
     id: 'coffe-7',
     name: 'Latte macchiato',
+    image: 'assets/images/coffee-7-preview.webp',
     description: 'Espresso with frothed milk and chocolate',
     price: '5.50',
     category: 'coffee',
@@ -254,6 +261,7 @@ const products = [
   {
     id: 'coffe-8',
     name: 'Coffee with cognac',
+    image: 'assets/images/coffee-8-preview.webp',
     description: 'Fragrant black coffee with cognac and whipped cream',
     price: '6.50',
     category: 'coffee',
@@ -290,6 +298,7 @@ const products = [
   {
     id: 'tea-1',
     name: 'Moroccan',
+    image: 'assets/images/tea-1.webp',
     description:
       'Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint',
     price: '4.50',
@@ -327,6 +336,7 @@ const products = [
   {
     id: 'tea-2',
     name: 'Ginger',
+    image: 'assets/images/tea-2.webp',
     description: 'Original black tea with fresh ginger, lemon and honey',
     price: '5.00',
     category: 'tea',
@@ -363,6 +373,7 @@ const products = [
   {
     id: 'tea-3',
     name: 'Cranberry',
+    image: 'assets/images/tea-3.webp',
     description: 'Invigorating black tea with cranberry and honey',
     price: '5.00',
     category: 'tea',
@@ -399,6 +410,7 @@ const products = [
   {
     id: 'tea-4',
     name: 'Sea buckthorn',
+    image: 'assets/images/tea-4.webp',
     description: 'Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon',
     price: '5.50',
     category: 'tea',
