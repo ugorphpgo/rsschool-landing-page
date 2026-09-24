@@ -1,0 +1,33 @@
+{
+  "name": "rsschool-landing-page",
+  "version": "1.0.0",
+  "description": "landing project of the rsschool course",
+  "main": "index.js",
+  "scripts": {
+    "lint:js": "eslint .",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:css:fix": "stylelint \"**/*.css\" --fix",
+    "format": "prettier --write \"**/*.{js,css,html,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,css,html,json,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ugorphpgo/rsschool-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ugorphpgo/rsschool-landing-page/issues"
+  },
+  "homepage": "https://github.com/ugorphpgo/rsschool-landing-page#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.10.0",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.6",
+    "stylelint": "^17.15.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}
