@@ -26,4 +26,12 @@ function renderCatalog (category){
     .forEach(product =>grid.append(createCard(product)));
 }
 
+function getProduct (el) {
+  const card = el.closest('.preview__card');
+  if (!card) {
+    return undefined;
+  }
+  return products.find(product => el.id === card.dataset.id);
+}
+
 renderCatalog('coffee');
