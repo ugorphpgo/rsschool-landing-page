@@ -31,7 +31,7 @@ function getProduct (el) {
   if (!card) {
     return undefined;
   }
-  return products.find(product => el.id === card.dataset.id);
+  return products.find(product => product.id === card.dataset.id);
 }
 
 renderCatalog('coffee');
