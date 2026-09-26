@@ -3,3 +3,8 @@ header .link__catalog {
     border-bottom-color:var(--text-primary);
     cursor: text;
 }
+
+.catalog__tab[aria-pressed="true"] {
+    background-color: var(--background-container);
+    color: var(--text-inverse);
+}

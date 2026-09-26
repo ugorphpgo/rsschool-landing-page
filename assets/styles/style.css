@@ -651,11 +651,6 @@ h1.catalog__title {
   color: var(--text-inverse);
 }
 
-.active__tab {
-  background-color: var(--background-container);
-  color: var(--text-inverse);
-}
-
 .tab__icon {
   display: flex;
   align-items: center;

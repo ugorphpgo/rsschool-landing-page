@@ -1,9 +1,11 @@
 const grid= document.querySelector('.catalog__grid');
+const tabs = document.querySelector('.catalog__tabs');
 
 function createCard (product){
   const card = document.createElement('div');
   card.className = 'preview__card';
   card.dataset.id = product.id;
+  card.dataset.category = product.category;
   card.innerHTML = `
   <div class="card__box">
     <img class="card__image" src="${product.image}" alt="${product.name}">
@@ -34,4 +36,15 @@ function getProduct (el) {
   return products.find(product => product.id === card.dataset.id);
 }
 
+tabs.addEventListener('click', (event) => {
+  const tab = event.target.closest('.catalog__tab');
+  if (!tab) {
+    if (!tab || !tabs.contains(tab)) return;
+  }
+  tabs.querySelectorAll('.catalog__tab').forEach((t)=>t.setAttribute('aria-pressed', String(t===tab)));
+  renderCatalog(tab.dataset.category);
+});
+
 renderCatalog('coffee');
+
+
