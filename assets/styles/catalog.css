@@ -8,3 +8,11 @@ header .link__catalog {
     background-color: var(--background-container);
     color: var(--text-inverse);
 }
+
+.more__icon{
+    color: var(--text-primary);
+}
+
+.hidden__button{
+    display: none;
+}

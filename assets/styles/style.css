@@ -759,10 +759,6 @@ h1.catalog__title {
   line-height: 125%;
 }
 
-.catalog__grid > *:nth-child(n + 5) {
-  display: none;
-}
-
 /* Dark theme */
 
 [data-theme='dark'] {
@@ -933,6 +929,13 @@ h1.catalog__title {
   }
 }
 
+@media (width <= 768px){
+  .catalog__grid:not(.expanded) > *:nth-child(n + 5) {
+    display: none;
+  }
+
+}
+
 @media (width >=769px) {
   .burger__menu {
     display: none;
@@ -946,7 +949,7 @@ h1.catalog__title {
     display: none;
   }
 
-  .catalog__grid > *:nth-child(n + 5) {
+  .catalog__grid:not(.expanded) > *:nth-child(n + 5) {
     display: flex;
   }
 }

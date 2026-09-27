@@ -1,5 +1,6 @@
 const grid= document.querySelector('.catalog__grid');
 const tabs = document.querySelector('.catalog__tabs');
+const moreButton = document.querySelector('.refresh__button');
 
 function createCard (product){
   const card = document.createElement('div');
@@ -21,13 +22,6 @@ function createCard (product){
   return card;
 }
 
-function renderCatalog (category){
-  grid.replaceChildren();
-  products
-    .filter(product => product.category === category)
-    .forEach(product =>grid.append(createCard(product)));
-}
-
 function getProduct (el) {
   const card = el.closest('.preview__card');
   if (!card) {
@@ -36,13 +30,35 @@ function getProduct (el) {
   return products.find(product => product.id === card.dataset.id);
 }
 
+function updateMoreButton () {
+  if(!grid.classList.contains('expanded')&& grid.childElementCount > 4) {
+    moreButton.classList.remove('hidden__button');
+  }else{
+    moreButton.classList.add('hidden__button');
+  }
+}
+
+function renderCatalog(category) {
+  grid.replaceChildren();
+  products
+    .filter((product) => product.category === category)
+    .forEach((product) => grid.append(createCard(product)));
+  grid.classList.remove('expanded');
+  updateMoreButton();
+}
+
 tabs.addEventListener('click', (event) => {
   const tab = event.target.closest('.catalog__tab');
   if (!tab) {
-    if (!tab || !tabs.contains(tab)) return;
+     return;
   }
   tabs.querySelectorAll('.catalog__tab').forEach((t)=>t.setAttribute('aria-pressed', String(t===tab)));
   renderCatalog(tab.dataset.category);
+});
+
+moreButton.addEventListener('click', () => {
+  grid.classList.add('expanded');
+  updateMoreButton();
 });
 
 renderCatalog('coffee');
