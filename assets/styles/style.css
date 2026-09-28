@@ -770,6 +770,77 @@ h1.catalog__title {
   line-height: 125%;
 }
 
+/*Modal card*/
+
+.modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: var(--background-overlay);
+}
+
+.modal__open{
+  overflow: hidden;
+}
+
+.modal__open .modal{
+  display: flex;
+}
+
+.modal__window{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--background-modal);
+  color: var(--text-primary);
+  border-radius: 40px;
+  padding: 16px;
+  max-height: calc(100% - 32px);
+  overflow-y: auto
+}
+
+.modal__close{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--background-container);
+  border-radius: 100px;
+}
+
+.modal__tabs{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.modal__tab-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+  border: 1px solid var(--border-primary);
+  border-radius: 100px;
+}
+
+.modal__icon{
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  background: var(--border-primary);
+}
+
+.modal__image{
+  display: none;
+}
+
 /* Dark theme */
 
 [data-theme='dark'] {
@@ -872,6 +943,14 @@ h1.catalog__title {
   .app__img {
     max-width: 630px;
   }
+
+  .modal__image{
+    display: block;
+    width:310px;
+    height:310px;
+    border-radius: 40px;
+    object-fit: cover;
+  }
 }
 
 @media (width >=1024px) {
@@ -928,6 +1007,10 @@ h1.catalog__title {
   }
 
   .catalog__title {
+    max-width: 800px;
+  }
+
+  .modal__window{
     max-width: 800px;
   }
 }
