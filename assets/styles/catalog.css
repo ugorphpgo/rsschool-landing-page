@@ -1,4 +1,4 @@
-header .link__catalog {
+.header__controls .link__catalog {
     border-bottom: 2px solid transparent;
     border-bottom-color:var(--text-primary);
     cursor: text;
@@ -15,4 +15,11 @@ header .link__catalog {
 
 .hidden__button{
     display: none;
+}
+
+@media (width <= 768px){
+    .catalog__grid:not(.expanded) > *:nth-child(n + 5) {
+        display: none;
+    }
+
 }
