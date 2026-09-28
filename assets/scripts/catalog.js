@@ -110,7 +110,7 @@ grid.addEventListener('click', (event) => {
 });
 
 modal.addEventListener('click', (event) => {
-  if (event.target!==modal || event.target.closest('.modal__close')) {
+  if (event.target===modal || event.target.closest('.modal__close')) {
     setModalOpen(false);
   }
   const size = event.target.closest('[data-size]');
