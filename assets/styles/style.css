@@ -816,7 +816,7 @@ h1.catalog__title {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border: 1px solid var(--background-container);
+  border: 1px solid var(--border-primary);
   border-radius: 100px;
   width: 100%;
   padding: 10px;
