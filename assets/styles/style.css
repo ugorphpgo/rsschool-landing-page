@@ -850,8 +850,8 @@ h1.catalog__title {
   cursor: pointer;
 }
 
-.modal__tab[aria-pressed="true"] {
-  background-color: var(--background-container);
+.modal__tab-item[aria-pressed="true"] {
+  background: var(--background-modalcontrol);
   color: var(--text-inverse);
 }
 

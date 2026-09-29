@@ -102,6 +102,15 @@ function renderModal(product) {
   `;
 }
 
+function updatePrice(){
+  let additivePrice=0;
+  const size = document.querySelector("[data-size][aria-pressed='true']").dataset.size;
+  let total = Number(currentProduct.price) + Number(currentProduct.sizes[size]['add-price']);
+  const additives = document.querySelectorAll("[data-additive][aria-pressed='true']");
+  additives.forEach(additive => total += Number(currentProduct.additives[additive.dataset.additive]['add-price']));
+  modal.querySelector('.modal__price').textContent=`$${total.toFixed(2)}`
+}
+
 grid.addEventListener('click', (event) => {
   const product = getProduct(event.target);
   if (!product) return;
@@ -110,15 +119,26 @@ grid.addEventListener('click', (event) => {
 });
 
 modal.addEventListener('click', (event) => {
-  if (event.target===modal || event.target.closest('.modal__close')) {
+  if (event.target === modal || event.target.closest('.modal__close')) {
     setModalOpen(false);
   }
   const size = event.target.closest('[data-size]');
-  modal
-    .querySelectorAll('[data-size]')
-    .forEach((s) => s.setAttribute('aria-pressed', String(s === size)));
+  if (size) {
+    modal
+      .querySelectorAll('[data-size]')
+      .forEach((s) => s.setAttribute('aria-pressed', String(s === size)));
+  }
+
+  const additive = event.target.closest('[data-additive]');
+  if (additive) {
+    let state = additive.getAttribute('aria-pressed');
+   additive.setAttribute('aria-pressed', String(!(state==='true')));
+  }
+  updatePrice();
+
 })
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setModalOpen(false);
 });
+
