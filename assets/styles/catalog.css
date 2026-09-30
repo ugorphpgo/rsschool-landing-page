@@ -1,5 +1,28 @@
-header .link__catalog {
+.header__controls .link__catalog,
+.header__nav .link__catalog {
     border-bottom: 2px solid transparent;
     border-bottom-color:var(--text-primary);
     cursor: text;
+}
+
+
+
+.catalog__tab[aria-pressed="true"] {
+    background-color: var(--background-container);
+    color: var(--text-inverse);
+}
+
+.more__icon{
+    color: var(--text-primary);
+}
+
+.hidden__button{
+    display: none;
+}
+
+@media (width <= 768px){
+    .catalog__grid:not(.expanded) > *:nth-child(n + 5) {
+        display: none;
+    }
+
 }
