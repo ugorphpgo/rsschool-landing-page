@@ -840,9 +840,10 @@ h1.catalog__title {
   justify-content: center;
   flex-direction: row;
   gap: 8px;
+  padding-block: 8px;
+  padding-inline: 8px 16px;
   border: 1px solid var(--border-primary);
   border-radius: 100px;
-  padding: 4px 16px 4px 4px;
   min-height: 38px;
   background: none;
   color: var(--text-primary);
@@ -852,6 +853,7 @@ h1.catalog__title {
 
 .modal__tab-item[aria-pressed="true"] {
   background: var(--background-modalcontrol);
+  border:var(--border-primary);
   color: var(--text-inverse);
 }
 
@@ -861,15 +863,23 @@ h1.catalog__title {
   font-weight: 600;
 }
 
-.modal__icon{
-  border-radius: 100px;
-  width: 30px;
-  height: 30px;
-  background: var(--border-primary);
-}
-
 .modal__image{
   display: none;
+}
+
+.modal__size-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--border-primary);
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--text-primary);
 }
 
 /* Dark theme */

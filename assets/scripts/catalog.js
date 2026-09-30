@@ -87,9 +87,9 @@ function renderModal(product) {
         <h2 class="preview__h2">${product.name}</h2>
         <p>${product.description}</p>
         <div class="modal__tabs">
-          <button class="modal__tab-item" type="button" data-size="s" aria-pressed="true">S ${product.sizes.s.size}</button>
-          <button class="modal__tab-item" type="button" data-size="m" aria-pressed="false">M ${product.sizes.m.size}</button>
-          <button class="modal__tab-item" type="button" data-size="l" aria-pressed="false">L ${product.sizes.l.size}</button>
+          <button class="modal__tab-item" type="button" data-size="s" aria-pressed="true"><span class="modal__size-icon">S</span> ${product.sizes.s.size}</button>
+          <button class="modal__tab-item" type="button" data-size="m" aria-pressed="false"><span class="modal__size-icon">M</span> ${product.sizes.m.size}</button>
+          <button class="modal__tab-item" type="button" data-size="l" aria-pressed="false"><span class="modal__size-icon">L</span>${product.sizes.l.size}</button>
 </div>
 <div class="modal__tabs">
   <button class="modal__tab-item" type="button" data-additive="0" aria-pressed="false">${product.additives[0].name}</button>
